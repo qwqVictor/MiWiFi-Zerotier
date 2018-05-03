@@ -5,7 +5,9 @@ echo "Installing..."
 cp -a files/ /
 printf "Your network ID? Input: "
 read netid
-echo "/userdisk/ZeroTier/usr/bin/zerotier-one -d" > /tmp/tmp_zerotier.sh
+echo > /tmp/tmp_zerotier.sh
+echo "export LD_LIBRARY_PATH=/userdisk/ZeroTier/usr/lib:\$LD_LIBRARY_PATH" >> /tmp/tmp_zerotier.sh
+echo "/userdisk/ZeroTier/usr/bin/zerotier-one -d" >> /tmp/tmp_zerotier.sh
 echo "/userdisk/ZeroTier/usr/bin/zerotier-cli -join $netid" >> /tmp/tmp_zerotier.sh
 echo >> /tmp/tmp_zerotier.sh
 mv /etc/rc.local /etc/rc.local.zerotier_backup
