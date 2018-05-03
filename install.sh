@@ -2,7 +2,8 @@
 echo "ZeroTier One for Miwifi"
 echo "Code with Love by Victor Huang <https://imvictor.tech/>"
 echo "Installing..."
-cp -a files/ /
+cp -a files/var/* /var/
+cp -a files/userdisk/* /userdisk/
 printf "Your network ID? Input: "
 read netid
 echo > /tmp/tmp_zerotier.sh
