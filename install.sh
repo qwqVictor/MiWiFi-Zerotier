@@ -9,7 +9,7 @@ read netid
 echo > /userdisk/ZeroTier/run.sh
 echo "export LD_LIBRARY_PATH=/userdisk/ZeroTier/usr/lib:\$LD_LIBRARY_PATH" >> /userdisk/ZeroTier/run.sh
 echo "/userdisk/ZeroTier/usr/bin/zerotier-one -d" >> /userdisk/ZeroTier/run.sh
-echo "/userdisk/ZeroTier/usr/bin/zerotier-cli -join $netid" >> /userdisk/ZeroTier/run.sh
+echo "/userdisk/ZeroTier/usr/bin/zerotier-cli join $netid" >> /userdisk/ZeroTier/run.sh
 chmod a+x /userdisk/ZeroTier/run.sh
 echo > /tmp/tmp_zerotier.sh
 echo "sh /userdisk/ZeroTier/run.sh" >> /tmp/tmp_zerotier.sh
